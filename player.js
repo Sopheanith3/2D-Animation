@@ -13,8 +13,7 @@ class Player {
         this.speed = 25;
         this.x = 128;
         this.y = 155;
-        // Add scale factor
-        this.scale = 2.5; // Adjust this value to make the sprite larger or smaller
+        this.scale = 2.5; 
     }
 
     update() {
@@ -25,7 +24,6 @@ class Player {
     }
 
     draw(ctx) {
-        //console.log(`Drawing at: (${this.x}, ${this.y})`);
         ctx.save();
         ctx.scale(this.scale, this.scale);
         this.animator.drawFrame(this.game.clockTick, ctx, this.x / this.scale, this.y / this.scale);

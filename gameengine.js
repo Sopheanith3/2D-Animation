@@ -5,11 +5,7 @@ class GameEngine {
         // What you will use to draw
         // Documentation: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
         this.ctx = null;
-
-        // Everything that will be updated and drawn each frame
         this.entities = [];
-
-        // Information on the input
         this.click = null;
         this.mouse = null;
         this.wheel = null;
@@ -60,7 +56,7 @@ class GameEngine {
             if (this.options.debugging) {
                 console.log("WHEEL", getXandY(e), e.wheelDelta);
             }
-            e.preventDefault(); // Prevent Scrolling
+            e.preventDefault(); 
             this.wheel = e;
         });
 
@@ -68,7 +64,7 @@ class GameEngine {
             if (this.options.debugging) {
                 console.log("RIGHT_CLICK", getXandY(e));
             }
-            e.preventDefault(); // Prevent Context Menu
+            e.preventDefault(); 
             this.rightclick = getXandY(e);
         });
 

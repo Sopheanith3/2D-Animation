@@ -2,12 +2,12 @@
     "use strict";
 
     const TILE_SIZE = 125;
-    const MOVEMENT_SPEED = 2.0; // Increased speed for faster movement
+    const MOVEMENT_SPEED = 2.0; 
     const FPS = 60;
     const FRAME_TIME = 1000 / FPS;
 
     // Animation prototype
-    const Animation = function (frame_set, delay = 10) { // Decreased delay for faster animation
+    const Animation = function (frame_set, delay = 10) {
         this.count = 0;
         this.delay = delay;
         this.frame = frame_set[0];
@@ -63,7 +63,7 @@
     };
 
     const player = {
-        animation: new Animation([0], 10), // Even faster animation with reduced delay
+        animation: new Animation([0], 10), 
         isJumping: false,
         height: TILE_SIZE,
         width: TILE_SIZE,
@@ -100,10 +100,10 @@
             }
 
             if (player.isMoving) {
-                player.animation.change(spriteSheet.animations.walk, 10); // Even faster animation
+                player.animation.change(spriteSheet.animations.walk, 10); 
             }
 
-            player.yVelocity += 0.8; // Gravity
+            player.yVelocity += 0.8; 
             player.x += player.xVelocity;
             player.y += player.yVelocity;
 
@@ -179,7 +179,7 @@
     adjustCanvasSize();
 
     spriteSheet.image.addEventListener("load", function () {
-        player.animation.change(spriteSheet.animations.walk, 10); // Even faster animation on load
+        player.animation.change(spriteSheet.animations.walk, 10); 
         window.requestAnimationFrame(gameLoop);
     });
 
