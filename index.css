@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: grid;
+    place-items: center;
+    background-color: gray;
+    color: #ffffff;
+    padding: 0 8px;
+}
+canvas {
+    border: 50px solid black;
+    border-width: thick;
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: red; /* Fallback color */
+}
