@@ -11,9 +11,9 @@ class Player {
             0.15
         );
         this.speed = 25;
-        this.x = 128;
-        this.y = 155;
-        this.scale = 2.5; 
+        this.x = 0;
+        this.y = 100;
+        this.scale = 1.6; 
     }
 
     update() {
